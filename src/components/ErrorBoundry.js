@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 
 class ErrorBoundry extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  state = {
       hasError: false,
-    };
-  }
+  };
 
   componentDidCatch() {
     this.setState({ hasError: true });
